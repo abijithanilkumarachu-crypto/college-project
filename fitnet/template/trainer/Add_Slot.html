@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Fitness Trainer | Time Slot Selection</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Teko:wght@400;600&display=swap" rel="stylesheet">
+
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+    <!-- Libraries -->
+    <link rel="stylesheet" href="{% static 'lib/animate/animate.min.css' %}" />
+    <link href="{% static 'lib/owlcarousel/assets/owl.carousel.min.css' %}" rel="stylesheet">
+
+    <!-- Bootstrap & Custom -->
+    <link href="{% static 'css/bootstrap.min.css' %}" rel="stylesheet">
+    <link href="{% static 'css/style.css' %}" rel="stylesheet">
+
+    <style>
+        body {
+            background-image: url('../static/img/gym-6.jpg');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            color: #333;
+            font-family: 'Roboto', sans-serif;
+        }
+
+        .navbar {
+            background: rgba(255, 255, 255, 0.9) !important;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+        }
+
+        .form-section {
+            background: #ffffffee;
+            border-radius: 20px;
+            box-shadow: 0 5px 25px rgba(0, 0, 0, 0.1);
+            padding: 40px;
+            max-width: 550px;
+            margin: 80px auto;
+        }
+
+        .form-section h1 {
+            font-family: 'Teko', sans-serif;
+            font-size: 42px;
+            text-align: center;
+            color: #007bff;
+            margin-bottom: 30px;
+        }
+
+        .form-floating label {
+            color: #666;
+        }
+
+        .form-control, select {
+            border-radius: 10px !important;
+            border: 1px solid #ccc !important;
+        }
+
+        .form-control:focus, select:focus {
+            box-shadow: 0 0 5px rgba(0, 123, 255, 0.3);
+            border-color: #007bff;
+        }
+
+        .btn-primary {
+            background-color: #007bff !important;
+            border: none;
+            border-radius: 10px;
+            font-weight: 500;
+        }
+
+        .btn-primary:hover {
+            background-color: #0056b3 !important;
+        }
+
+        footer {
+            background: #f9f9f9;
+            color: #555;
+            padding: 30px 0;
+            text-align: center;
+            border-top: 1px solid #e0e0e0;
+        }
+
+        footer a {
+            color: #007bff;
+            text-decoration: none;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Navbar -->
+   
+  <div class="container d-flex justify-content-between align-items-center">
+    
+    <!-- Logo (Left) -->
+    <!-- <a href="#" class="navbar-brand d-flex align-items-center"> -->
+      <h2 class="text-primary mb-0" style="font-weight: 800; font-family: 'Montserrat', sans-serif;">
+        <i class="fas fa-hand-rock me-2"></i>Fitness
+      </h2>
+    </a>
+
+    <!-- Back Button (Right) -->
+    <a href="Trainerhome" class="btn btn-outline-primary fw-semibold px-4 py-2 rounded-pill">
+      ← Back
+    </a>
+
+  </div>
+</nav>
+
+
+
+    <!-- Time Slot Form -->
+    <section class="form-section">
+        <h1>Select Your Time Slot</h1>
+        <form action="Trainerhome">
+            <div class="mb-4">
+                <label class="form-label fw-bold">Select Day</label>
+                <select name="Days" class="form-select">
+                    <option selected disabled>Choose a day</option>
+                    <option value="Monday">Monday</option>
+                    <option value="Tuesday">Tuesday</option>
+                    <option value="Wednesday">Wednesday</option>
+                    <option value="Thursday">Thursday</option>
+                    <option value="Friday">Friday</option>
+                    <option value="Saturday">Saturday</option>
+                </select>
+            </div>
+
+            <div class="mb-4">
+                <label class="form-label fw-bold">Starting Time</label>
+                <input type="time" name="start_time" class="form-control" required>
+            </div>
+
+            <div class="mb-4">
+                <label class="form-label fw-bold">Ending Time</label>
+                <input type="time" name="end_time" class="form-control" required>
+            </div>
+
+            <div class="text-center">
+                <button type="submit" class="btn btn-primary w-100 py-3">Submit</button>
+            </div>
+        </form>
+    </section>
+
+    <!-- Footer -->
+   
+
+    <!-- JS -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="{% static 'lib/wow/wow.min.js' %}"></script>
+    <script src="{% static 'lib/easing/easing.min.js' %}"></script>
+    <script src="{% static 'lib/waypoints/waypoints.min.js' %}"></script>
+    <script src="{% static 'lib/owlcarousel/owl.carousel.min.js' %}"></script>
+    <script src="{% static 'js/main.js' %}"></script>
+
+</body>
+</html>

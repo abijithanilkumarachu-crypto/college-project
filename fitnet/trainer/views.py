@@ -1,0 +1,21 @@
+from django.shortcuts import render
+def TrainerRegistration(request):
+    return render(request,'trainer/TrainerRegistration.html')
+def TrainerLogin(request):
+    return render(request,'trainer/TrainerLogin.html')
+def Trainerhome(request):
+    return render(request,'trainer/Trainerhome.html')
+def Add_Slot(request):
+    return render(request,'trainer/Add_Slot.html')
+def View_Slot(request):
+    return render(request,'trainer/View_Slot.html')
+def About(request):
+    return render(request,'trainer/About.html')
+def Task(request):
+    return render(request,'trainer/Task.html')                             
+def User_details(request):
+    return render(request,'trainer/User_Details.html')
+def Diet(request):
+    return render(request,'trainer/Diet.html')
+def User_Profile(request):
+    return render(request,'trainer/User_Profile.html')

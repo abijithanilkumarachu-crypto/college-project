@@ -1,0 +1,259 @@
+ <!DOCTYPE html>
+{% load static %}
+<html lang="en">
+
+    <!-- <head>
+        <meta charset="utf-8">
+        <title>Fitnet - Fitness Website Template</title>
+        <meta content="width=device-width, initial-scale=1.0" name="viewport">
+        <meta content="" name="keywords">
+        <meta content="" name="description">
+
+        <!-- Google Web Fonts -->
+        <!-- <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Teko:wght@300..700&display=swap" rel="stylesheet"> -->
+
+        <!-- Icon Font Stylesheet -->
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"/>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+        <!-- Libraries Stylesheet -->
+        <link rel="stylesheet" href="{% static 'lib/animate/animate.min.css'%}"/>
+        <link href="{% static 'lib/owlcarousel/assets/owl.carousel.min.css'%}" rel="stylesheet">
+
+
+        <!-- Customized Bootstrap Stylesheet -->
+        <link href="{% static 'css/bootstrap.min.css'%}" rel="stylesheet">
+
+      <!-- Template Stylesheet -->
+        <!-- <link href="{% static 'css/style.css'%}" rel="stylesheet"> -->
+    </head>
+
+    <body style="background-image: url('../static/img/gym-6.jpg'); background-repeat: no-repeat; background-size: cover; background-attachment: fixed;">
+
+        <!-- Spinner Start -->
+        <!-- <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+            <div class="spinner-border text-primary" style="width: 3rem; height: 3rem;" role="status">
+                <span class="sr-only">Loading...</span>
+            </div>
+        </div> -->
+        <!-- Spinner End -->
+
+        <!-- Navbar & Hero Start -->
+        <div class="container-fluid header-top">
+  <div class="container d-flex align-items-center justify-content-between py-3">
+    <!-- Left: Brand -->
+    <h1 class="text-danger mb-0">
+      <i class="fas fa-hand-rock me-2"></i> Fitnet
+    </h1>
+
+    <!-- Right: Back Button -->
+    <a href="Userhome" class="btn btn-primary py-2 px-4">Back</a>
+  </div>
+
+  <!-- Centered Heading Below Navbar -->
+  <div class="container text-center mt-3">
+    <h1 style="color: white;">Trainer Information</h1>
+  </div>
+</div>
+
+        <!-- <!DOCTYPE html>
+<html lang="en">
+<head> -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Trainer Profile - Martin</title>
+  <style>
+    :root {
+      --bg: #f8fafc;
+      --surface: #ffffff;
+      --border: #e2e8f0;
+      --text: #0f172a;
+      --muted: #64748b;
+      --accent: #0ea5a4;
+      --accent-dark: #089b98;
+      --radius: 12px;
+      font-family: system-ui, -apple-system, "Segoe UI", Roboto;
+    }
+
+    body {
+      background: var(--bg);
+      margin: 0;
+      padding: 40px 20px;
+      color: var(--text);
+    }
+
+    .profile-container {
+      max-width: 800px;
+      margin: auto;
+      background: var(--surface);
+      border-radius: var(--radius);
+      box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+      padding: 30px;
+    }
+
+    .trainer-info h1 {
+      font-size: 28px;
+      color: var(--accent-dark);
+      margin: 0 0 8px 0;
+    }
+
+    .trainer-info p {
+      margin: 4px 0;
+      color: var(--muted);
+      font-size: 16px;
+    }
+
+    .section {
+      margin-top: 30px;
+    }
+
+    .section h2 {
+      font-size: 20px;
+      color: var(--accent-dark);
+      margin-bottom: 12px;
+      border-bottom: 1px solid var(--border);
+      padding-bottom: 5px;
+    }
+
+    .section p {
+      line-height: 1.6;
+      font-size: 15px;
+      color: var(--text);
+    }
+
+    .badges {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 10px;
+    }
+
+    .badge {
+      background: var(--accent);
+      color: #fff;
+      padding: 6px 12px;
+      border-radius: 20px;
+      font-size: 13px;
+      font-weight: 600;
+    }
+
+    .book-btn {
+      display: inline-block;
+      margin-top: 20px;
+      background: var(--accent);
+      color: #fff;
+      border: none;
+      border-radius: 8px;
+      padding: 12px 24px;
+      font-size: 16px;
+      font-weight: bold;
+      cursor: pointer;
+      transition: background 0.2s ease;
+      text-decoration: none;
+    }
+
+    .book-btn:hover {
+      background: var(--accent-dark);
+    }
+  </style>
+</head>
+<body>
+
+  <div class="profile-container">
+    <div class="trainer-info">
+      <h1>Martin</h1>
+      <p>B.Sc in Exercise Physiology</p>
+      <p>Location: Kerala, India</p>
+      <p>Rating: ⭐ 4.8 / 5</p>
+    </div>
+
+    <div class="section">
+      <h2>About Martin</h2>
+      <p>
+        Martin is a certified personal trainer with over 4 years of experience. He specializes in weight loss, strength training, and high-intensity interval training (HIIT). His approach is highly personalized, incorporating fitness assessments, structured workout plans, and nutritional advice to help clients reach their health goals efficiently and sustainably.
+      </p>
+    </div>
+
+    <div class="section">
+      <h2>Specialties</h2>
+      <div class="badges">
+        <div class="badge">Weight Loss</div>
+        <div class="badge">Strength Training</div>
+        <div class="badge">HIIT</div>
+        <div class="badge">Nutritional Coaching</div>
+      </div>
+    </div>
+
+    <div class="section">
+      <h2>Certifications</h2>
+      <p>
+        • ACE – American Council on Exercise<br>
+        • NASM – National Academy of Sports Medicine
+      </p>
+    </div>
+
+    <div class="section">
+      <h2>Availability</h2>
+      <p>
+        <strong>Weekdays:</strong><br>
+        • 8:00 AM – 11:00 AM<br>
+        • 4:00 PM – 9:00 PM
+      </p>
+    </div>
+
+    <div class="section">
+      <h2>Book a Session</h2>
+      <p>If you're ready to begin your fitness journey, you can book a personalized session with Martin below:</p>
+      <a href="UTBook" class="book-btn">Book Now</a>
+    </div>
+  </div>
+
+</body>
+</html>
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+        <script src="{% static 'lib/wow/wow.min.js'%}"></script>
+        <script src="{% static 'lib/easing/easing.min.js'%}"></script>
+        <script src="{% static 'lib/waypoints/waypoints.min.js'%}"></script>
+        <script src="{% static 'lib/owlcarousel/owl.carousel.min.js'%}"></script>
+        
+
+        <!-- Template Javascript -->
+        <script src="{% static 'js/main.js'%}"></script>
+    </body>
+
+</html> 

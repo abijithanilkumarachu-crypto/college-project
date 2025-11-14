@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Diet Plan - Trainer Panel</title>
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      margin: 0;
+      padding: 0;
+      background: url('../static/img/carousel-1.jpg') no-repeat center center fixed;
+      background-size: cover;
+    }
+
+    header {
+      background-color: rgba(45, 106, 79, 0.9);
+      color: white;
+      text-align: center;
+      padding: 15px;
+      font-size: 24px;
+      font-weight: bold;
+      letter-spacing: 1px;
+      position: relative;
+      border-bottom: 2px solid #1b4332;
+    }
+
+    /* Back Button Style */
+    .back-btn {
+      position: absolute;
+      right: 20px;
+      top: 50%;
+      transform: translateY(-50%);
+      background-color: rgba(255, 0, 0, 0.5);
+      color: white;
+      border: 1px solid red;
+      padding: 8px 16px;
+      border-radius: 8px;
+      cursor: pointer;
+      font-size: 14px;
+      font-weight: bold;
+      transition: 0.3s;
+    }
+
+    .back-btn:hover {
+      background-color: rgba(255, 0, 0, 0.8);
+    }
+
+    .container {
+      max-width: 1000px;
+      margin: 40px auto;
+      background: rgba(255, 255, 255, 0.9);
+      border-radius: 15px;
+      padding: 25px 40px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    }
+
+    .user-info {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 2px solid #ccc;
+      padding-bottom: 15px;
+      margin-bottom: 25px;
+    }
+
+    .user-info h2 {
+      color: #2d6a4f;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-bottom: 20px;
+    }
+
+    th, td {
+      text-align: left;
+      padding: 12px;
+      border-bottom: 1px solid #ddd;
+    }
+
+    th {
+      background-color: #2d6a4f;
+      color: white;
+    }
+
+    tr:hover {
+      background-color: #f1f1f1;
+    }
+
+    .notes {
+      background: #f8f9fa;
+      padding: 15px;
+      border-radius: 10px;
+      border-left: 4px solid #2d6a4f;
+      color: #333;
+    }
+
+    footer {
+      text-align: center;
+      padding: 15px;
+      color: #fff;
+      font-size: 14px;
+      background-color: rgba(0, 0, 0, 0.7);
+      margin-top: 40px;
+    }
+  </style>
+</head>
+<body>
+    
+  <header>
+    
+    Trainer Diet Plan
+                        
+    <button class="back-btn" onclick="window.history.back()">← Back</button>
+    
+  </header>
+
+  <div class="container">
+    <div class="user-info">
+      <h2>John Doe</h2>
+      <b>Monday,Wednesday,Friday</b>
+    </div>
+
+    <table>
+      <tr>
+        <th>Time</th>
+        <th>Meal</th>
+        <th>Description</th>
+        <th>Calories</th>
+      </tr>
+      <tr>
+        <td>7:00 AM</td>
+        <td>Breakfast</td>
+        <td>Oats with milk & banana</td>
+        <td>350 kcal</td>
+      </tr>
+      <tr>
+        <td>10:30 AM</td>
+        <td>Snack</td>
+        <td>Apple & almonds</td>
+        <td>150 kcal</td>
+      </tr>
+      <tr>
+        <td>1:00 PM</td>
+        <td>Lunch</td>
+        <td>Brown rice, grilled chicken, veggies</td>
+        <td>500 kcal</td>
+      </tr>
+      <tr>
+        <td>5:00 PM</td>
+        <td>Snacks</td>
+        <td>Salads & Boiled Eggs</td>
+        <td>500 kcal</td>
+      </tr>
+      <tr>
+        <td>8:00 PM</td>
+        <td>Dinner</td>
+        <td>Grilled fish & salad</td>
+        <td>400 kcal</td>
+      </tr>
+    </table>
+
+    <div class="notes">
+      <h3>Trainer Notes:</h3>
+      <p>Maintain consistent meal timings. Drink 3L water daily. Avoid junk food during weekdays. Add one cheat meal on Sunday.</p>
+    </div>
+  </div>
+
+
+  <div class="container">
+    <div class="user-info">
+      <h2>John Doe</h2>
+      <b>Tuesday,Thursday,Saturday</b>
+    </div>
+
+    <table>
+      <tr>
+        <th>Time</th>
+        <th>Meal</th>
+        <th>Description</th>
+        <th>Calories</th>
+      </tr>
+      <tr>
+        <td>7:00 AM</td>
+        <td>Breakfast</td>
+        <td>3 boiled eggs<br>A slice of brown toast</br></td>
+        <td>280 kcal</td>
+      </tr>
+      <tr>
+        <td>10:30 AM</td>
+        <td>Snack</td>
+        <td>Fresh Juice(no added sugar)& Nuts</td>
+        <td>250 kcal</td>
+      </tr>
+      <tr>
+        <td>1:00 PM</td>
+        <td>Lunch</td>
+        <td>Brown rice,Steamed Brocolli &chicken Breast</td>
+        <td>350 kcal</td>
+      </tr>
+      <tr>
+        <td>5:00 PM</td>
+        <td>Snacks</td>
+        <td>Green Tea(no sugar)+Roasted Chana</td>
+        <td>140 kcal</td>
+      </tr>
+      <tr>
+        <td>8:00 PM</td>
+        <td>Dinner</td>
+        <td>chapati & paneer</td>
+        <td>400 kcal</td>
+      </tr>
+    </table>
+
+    <div class="notes">
+      <h3>Trainer Notes:</h3>
+      <p>Stay consistent with your routine,and make sure to hydrate well before and after training.Eat balanced meals rich in protein and avoid sugary foods.</p>
+    </div>
+  </div>
+  
+
+  <!-- <footer>
+    © 2025 FitNet Trainer Panel | Designed for Trainer & User Efficiency
+  </footer> -->
+
+</body>
+</html>
