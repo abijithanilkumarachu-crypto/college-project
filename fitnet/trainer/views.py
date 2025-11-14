@@ -1,5 +1,6 @@
 from django.shortcuts import render
 def TrainerRegistration(request):
+    
     return render(request,'trainer/TrainerRegistration.html')
 def TrainerLogin(request):
     return render(request,'trainer/TrainerLogin.html')

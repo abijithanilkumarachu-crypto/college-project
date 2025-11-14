@@ -9,3 +9,6 @@ class User_Registration(models.Model):
     gender=models.CharField(max_length=6)
     address=models.CharField(max_length=50)
     password=models.CharField(max_length=10)
+
+    def __str__(self):
+        return self.fullname
