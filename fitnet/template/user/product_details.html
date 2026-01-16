@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+{% load static %}
+<html>
+<head>
+    <title>Product Details</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+
+<body class="bg-light">
+
+<div class="container mt-5">
+
+    {% comment %} <h3 class="text-center mb-4">Product Details</h3>
+
+    <form method="post" >
+        {% csrf_token %}
+
+        <div class="card p-4 shadow-sm" style="max-width:500px;margin:auto;">
+
+            <!-- IMAGE -->
+            <div class="text-center mb-3">
+                <img src="{{ product.image.url }}"
+                     class="img-fluid"
+                     style="max-width:250px;">
+            </div>
+
+            <!-- NAME -->
+            <div class="mb-3">
+                <label class="form-label">Product Name</label>
+                <input type="text" class="form-control"
+                       value="{{ product.name }}" name="product_name" readonly>
+            </div>
+
+            <!-- PRICE -->
+            <div class="mb-3">
+                <label class="form-label">Price</label>
+                <input type="text" class="form-control"
+                       value="₹{{ product.price }}" name="price" readonly>
+            </div>
+
+            <!-- DESCRIPTION -->
+            <div class="mb-3">
+                <label class="form-label">Description</label>
+                <textarea class="form-control" rows="4" name="description" readonly>{{ product.description }}</textarea>
+            </div>
+
+            <!-- CONFIRM -->
+            <div class="text-center mt-4">
+                <button type="submit" class="btn btn-success btn-lg">
+                    Confirm
+                </button>
+            </div>
+
+        </div>
+    </form> {% endcomment %}
+
+</div>
+<!DOCTYPE html>
+{% load static %}
+<html>
+<head>
+    <title>Product Details</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+
+<body class="bg-light">
+
+<div class="container mt-5">
+
+    <h3 class="text-center mb-4">Product Details</h3>
+
+    <form method="post" >
+        {% csrf_token %}
+
+        <div class="card p-4 shadow-sm" style="max-width:500px;margin:auto;">
+
+            <!-- IMAGE -->
+            <div class="text-center mb-3">
+                <img src="{{ product.image.url }}"
+                     class="img-fluid"
+                     style="max-width:250px;">
+            </div>
+
+            <!-- NAME -->
+            <div class="mb-3">
+                <label class="form-label">Product Name</label>
+                <input type="text" class="form-control"
+                       value="{{ product.name }}" name="product_name" readonly>
+            </div>
+
+            <!-- PRICE -->
+            <div class="mb-3">
+                <label class="form-label">Price</label>
+                <input type="text" class="form-control"
+                       value="₹{{ product.price }}" name="price" readonly>
+            </div>
+
+            <!-- DESCRIPTION -->
+            <div class="mb-3">
+                <label class="form-label">Description</label>
+                <textarea class="form-control" rows="4" name="description" readonly>{{ product.description }}</textarea>
+            </div>
+
+            <!-- CONFIRM -->
+            <div class="text-center mt-4">
+                <button type="submit" class="btn btn-success btn-lg">
+                    Confirm
+                </button>
+            </div>
+
+        </div>
+    </form>
+
+</div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+{% if messages %}
+<div class="modal fade" id="successModal" tabindex="-1">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+
+      <div class="modal-header bg-success text-white">
+        <h5 class="modal-title">Your Product is Booked</h5>
+      </div>
+
+      <div class="modal-body text-center">
+        {% for message in messages %}
+            <p class="mb-0">{{ message }}</p>
+        {% endfor %}
+      </div>
+
+      <div class="modal-footer justify-content-center">
+        <a href="{% url 'Userhome' %}" class="btn btn-success">
+            OK
+        </a>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        var modal = new bootstrap.Modal(
+            document.getElementById('successModal')
+        );
+        modal.show();
+    });
+</script>
+{% endif %}
+
+</body>
+</html>
+
+    </div>
+  </div>
+</div>
+
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>

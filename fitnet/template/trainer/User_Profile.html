@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Fitnet - Gym Trainer Profile</title>
+  <title>User Profile</title>
 
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;500;700&family=Teko:wght@500;700&display=swap" rel="stylesheet">
@@ -166,20 +166,16 @@
       <h1><i class="fas fa-hand-rock"></i> Fitnet</h1>
 
       <!-- Right side: Back Button -->
-      <a href="Trainerhome" class="back-btn" style="color:#ffb400;text-decoration:none;">← Back</a>
+      <a href="User_details" class="back-btn" style="color:#ffb400;text-decoration:none;">← Back</a>
     </div>
 
-    <!-- Contact Info -->
-    <div class="contact-info">
-      <a href="mailto:fitnetofficial@gmail.com"><i class="fas fa-envelope"></i> fitnetofficial@gmail.com</a>
-      <a href="tel:04872441040"><i class="fas fa-phone-alt"></i> 0487-2441040</a>
-    </div>
+   
   </header>
 
   <!-- Profile Section -->
   <div class="profile-container">
     <table>
-      <caption>Gym Trainer Profile</caption>
+      <caption>User Profile</caption>
 
       <tr>
         <td colspan="2" style="text-align:center;">
@@ -189,22 +185,19 @@
         </td>
       </tr>
 
-      <tr><th>Name</th><td>John Doe</td></tr>
-      <tr><th>Age</th><td>25</td></tr>
-      <tr><th>Contact</th><td>9876543210</td></tr>
-      <tr><th>Email</th><td>johndoe111@gmail.com</td></tr>
-      <tr><th>Height</th><td>5'8"</td></tr>
-      <tr><th>Weight</th><td>85 kg</td></tr>
-      <tr><th>User ID</th><td>U001</td></tr>
-      <tr><th>Goal</th><td>Weight Loss and Toning</td></tr>
-      <tr><th>Workout Plan</th><td>HIIT + Strength</td></tr>
-      <tr><th>Special Instructions</th><td>Undergone Knee Surgery Recently</td></tr>
-      <tr><th>Membership</th><td>6 Month Plan</td></tr>
-      <tr><th>Diet Instructions</th><td>Allergic to Kiwi</td></tr>
+      <tr><th>Name</th><td>{{ user.fullname }}</td></tr>
+      <tr><th>Age</th><td>{{ user.age }}</td></tr>
+      <tr><th>Contact</th><td>{{ user.phonenumber }}</td></tr>
+      <tr><th>Email</th><td>{{ user.emailaddress }}</td></tr>
+      <tr><th>Height</th><td>{{ user.height }} cm</td></tr>
+      <tr><th>Weight</th><td>{{ user.weight }} kg</td></tr>
+      <tr><th>Goal</th><td>{{ userbookings.Goal }}</td></tr>
+      <tr><th>Special Instructions</th><td>{{ userbookings.notes }}</td></tr>
+      <tr><th>Health Issues</th><td>{{ userbookings.health_issues }}</td></tr>
 
       <tr>
         <td colspan="2" class="footer-btns">
-          <button>Book Session</button>
+      
         </td>
       </tr>
     </table>

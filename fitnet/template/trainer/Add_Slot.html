@@ -107,10 +107,17 @@
       </h2>
     </a>
 
-    <!-- Back Button (Right) -->
+   <!-- Buttons (Right) -->
+<div class="d-flex gap-2">
     <a href="Trainerhome" class="btn btn-outline-primary fw-semibold px-4 py-2 rounded-pill">
-      ← Back
+        ← Back
     </a>
+
+    <a href="View_Slot" class="btn btn-primary fw-semibold px-4 py-2 rounded-pill">
+        View
+    </a>
+</div>
+
 
   </div>
 </nav>
@@ -120,10 +127,12 @@
     <!-- Time Slot Form -->
     <section class="form-section">
         <h1>Select Your Time Slot</h1>
-        <form action="Trainerhome">
-            <div class="mb-4">
+        <form method="post">
+            {% csrf_token %}
+            
+            <div class="mb-4" name="Day">
                 <label class="form-label fw-bold">Select Day</label>
-                <select name="Days" class="form-select">
+                <select name="Day" class="form-select">
                     <option selected disabled>Choose a day</option>
                     <option value="Monday">Monday</option>
                     <option value="Tuesday">Tuesday</option>
@@ -135,7 +144,7 @@
             </div>
 
             <div class="mb-4">
-                <label class="form-label fw-bold">Starting Time</label>
+                <label class="form-label fw-bold">Starting Time </label>
                 <input type="time" name="start_time" class="form-control" required>
             </div>
 

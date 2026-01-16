@@ -96,17 +96,8 @@
                                     <a href="Task" class="nav-item nav-link">Task</a>
                                     <a href="User_details" class="nav-item nav-link">User Details</a>
                                     <a href="Diet" class="nav-item nav-link">Diet</a>
-                                    <div class="nav-item dropdown">
-                                        <a href="#" class="nav-link" data-bs-toggle="dropdown">
-                                            <span class="dropdown-toggle">Slot</span>
-                                        </a>
-                                        <div class="dropdown-menu">
-                                            <a href="Add_Slot" class="dropdown-item">AddSlot</a>
-                                            <a href="View_Slot" class="dropdown-item">ViewSlot</a>
-                                            <!-- <a href="testimonial.html" class="dropdown-item">Testimonial</a> -->
-                                            <!-- <a href="404.html" class="dropdown-item">404 Page</a> -->
-                                        </div>
-                                    </div>
+                                    <a href="Add_Slot" class="nav-item nav-link">Conference Time</a>
+                                  
                                     <!-- <a href="contact.html" class="nav-item nav-link">Contact</a>
                                     <div class="nav-btn ps-3">
                                         <button class="btn-search btn btn-primary btn-md-square mt-2 mt-lg-0 mb-4 mb-lg-0 flex-shrink-0" data-bs-toggle="modal" data-bs-target="#searchModal"><i class="fas fa-search"></i></button>
@@ -198,7 +189,7 @@
                 <div class="row g-5">
                     <div class="col-xl-6 wow fadeInLeft" data-wow-delay="0.2s">
                         <div class="about-content h-100">
-                            <h4 class="text-primary">About Fitnet</h4>
+                            <h4 class="text-primary"></h4>
                             <h1 class="display-4 text-white mb-4">We are the best at fulfilling your potential and achieving your goals.</h1>
                             <p class="mb-4">"Fitness is a journey, not a destination. Enjoy the process, learn from your setbacks,and celebrate your victories-no matter how small."</p>
                             <div class="tab-class pb-4">
@@ -395,15 +386,15 @@
 
 
         <!-- Courses Start -->
-        <div class="container-fluid courses overflow-hidden py-5">
-            <div class="container py-5">
+        {% comment %} <div class="container-fluid courses overflow-hidden py-5">
+            <div class="container py-5"> {% endcomment %}
                 <!-- <div class="text-center mx-auto pb-5 wow fadeInUp" data-wow-delay="0.2s" style="max-width: 800px;">
                     <h4 class="text-primary"> Our Courses</h4>
                     <h1 class="display-4 text-white mb-4">Out Our Highlights Below</h1>
                     <p class="text-white mb-0">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Tenetur adipisci facilis cupiditate recusandae aperiam temporibus corporis itaque quis facere, numquam, ad culpa deserunt sint dolorem autem obcaecati, ipsam mollitia hic.
                     </p>
                 </div> -->
-                <div class="row gy-4 gx-0 justify-content-center">
+                {% comment %} <div class="row gy-4 gx-0 justify-content-center">
                     <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.2s">
                         <div class="courses-item">
                             <div class="courses-item-inner p-4">
@@ -412,28 +403,28 @@
                                         <img src="{% static 'img/icon-1.png'%}" class="img-fluid" alt="">
                                     </div>
                                     <div class="data-info d-flex flex-column">
-                                        <div class="courses-trainer d-flex align-items-center mb-1">
+                                        <div class="courses-trainer d-flex align-items-center mb-1"> {% endcomment %}
                                             <!-- <div class="me-2" style="width: 25px; height: 25px;">
                                                 <img src="{% static 'img/testimonial-3.jpg'%}" class="img-fluid" alt="">
                                             </div> -->
                                             <!-- <p class="mb-0">john doe</p> -->
-                                        </div>
+                                        {% comment %} </div> {% endcomment %}
                                         <!-- <div class="courses-date">
                                             <p class="mb-0">Aim:Weight Loss</p>
                                             <p class="mb-0">Time: 06.00 - 07.30</p>
                                         </div> -->
-                                    </div>
-                                </div>
-                                <a href="#" class="d-inline-block h4 mb-3">John Doe</a>
+                                    {% comment %} </div>
+                                </div> {% endcomment %}
+                                {% comment %} <a href="#" class="d-inline-block h4 mb-3">John Doe</a>
                                 <p class="mb-4">
                                         <div class="courses-date">
                                             <p class="mb-0">Aim:Weight Loss</p>
                                             <p class="mb-0">Time: 06.00 - 07.30</p>
                                              <img src="{% static 'img/testimonial-3.jpg'%}" class="img-fluid" alt="">
                                         </div>
-                                </p>
+                                </p> {% endcomment %}
                                 <!-- <a href="#" class="btn btn-primary py-2 px-4"> <span>Read More</span></a> -->
-                            </div>
+                            {% comment %} </div>
                         </div>
                     </div>
                     <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.4s">
@@ -445,16 +436,16 @@
                                     </div>
                                     <div class="data-info d-flex flex-column">
                                         <div class="courses-trainer d-flex align-items-center mb-1">
-                                            <div class="me-2" style="width: 25px; height: 25px;">
+                                            <div class="me-2" style="width: 25px; height: 25px;"> {% endcomment %}
                                                 <!-- <img src="{% static 'img/testimonial-3.jpg'%}" class="img-fluid" alt=""> -->
-                                            </div>
+                                            {% comment %} </div> {% endcomment %}
                                             <!-- <p class="mb-0">Jane Smith</p> -->
-                                        </div>
+                                        {% comment %} </div> {% endcomment %}
                                         <!-- <div class="courses-date">
                                             <p class="mb-0">Aim:Strength</p>
                                             <p class="mb-0">Time: 16.00 - 17.30</p>
                                         </div> -->
-                                    </div>
+                                    {% comment %} </div>
                                 </div>
                                 <a href="#" class="d-inline-block h4 mb-3">Jane Smith</a>
                                 <p class="mb-4">
@@ -463,9 +454,9 @@
                                             <p class="mb-0">Time: 16.00 - 17.30</p>
                                              <img src="{% static 'img/testimonial-3.jpg'%}" class="img-fluid" alt="">
                                         </div>
-                                </p>
+                                </p> {% endcomment %}
                                 <!-- <a href="#" class="btn btn-primary py-2 px-4"> <span>Read More</span></a> -->
-                            </div>
+                            {% comment %} </div>
                         </div>
                     </div>
                     <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.6s">
@@ -477,16 +468,16 @@
                                     </div>
                                     <div class="data-info d-flex flex-column">
                                         <div class="courses-trainer d-flex align-items-center mb-1">
-                                            <div class="me-2" style="width: 25px; height: 25px;">
+                                            <div class="me-2" style="width: 25px; height: 25px;"> {% endcomment %}
                                                 <!-- <img src="{% static 'img/testimonial-3.jpg'%}" class="img-fluid" alt=""> -->
-                                            </div>
+                                            {% comment %} </div> {% endcomment %}
                                             <!-- <p class="mb-0">Paul Flavius</p> -->
-                                        </div>
+                                        {% comment %} </div> {% endcomment %}
                                         <!-- <div class="courses-date"> -->
                                             <!-- <p class="mb-1">Date: Saturday</p> -->
                                             <!-- <p class="mb-0">Time: 06.00 - 07.00</p> -->
                                         <!-- </div> -->
-                                    </div>
+                                    {% comment %} </div>
                                 </div>
                                 <a href="#" class="d-inline-block h4 mb-3">Michael Lee</a>
                                 <p class="mb-4"> 
@@ -495,9 +486,9 @@
                                             <p class="mb-0">Time: 10.00 - 11.30</p>
                                              <img src="{% static 'img/testimonial-3.jpg'%}" class="img-fluid" alt="">
                                         </div>
-                                </p>
+                                </p> {% endcomment %}
                                 <!-- <a href="#" class="btn btn-primary py-2 px-4"> <span>Read More</span></a> -->
-                            </div>
+                            {% comment %} </div>
                         </div>
                     </div>
                     <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.2s">
@@ -509,16 +500,16 @@
                                     </div>
                                     <div class="data-info d-flex flex-column">
                                         <div class="courses-trainer d-flex align-items-center mb-1">
-                                            <div class="me-2" style="width: 25px; height: 25px;">
+                                            <div class="me-2" style="width: 25px; height: 25px;"> {% endcomment %}
                                                 <!-- <img src="{% static 'img/testimonial-3.jpg'%}" class="img-fluid" alt=""> -->
-                                            </div>
+                                            {% comment %} </div> {% endcomment %}
                                             <!-- <p class="mb-0">Paul Flavius</p> -->
-                                        </div>
+                                        {% comment %} </div> {% endcomment %}
                                         <!-- <div class="courses-date"> -->
                                             <!-- <p class="mb-1">Date: Saturday</p> -->
                                             <!-- <p class="mb-0">Time: 06.00 - 07.00</p> -->
                                         <!-- </div> -->
-                                    </div>
+                                    {% comment %} </div>
                                 </div>
                                 <a href="#" class="d-inline-block h4 mb-3">Jacob</a>
                                 
@@ -528,9 +519,9 @@
                                             <p class="mb-0">Time: 08.00 - 09.30</p>
                                              <img src="{% static 'img/testimonial-7.jpg'%}" class="img-fluid" alt="">
                                         </div>
-                                </p>
+                                </p> {% endcomment %}
                                 <!-- <a href="#" class="btn btn-primary py-2 px-4"> <span>Read More</span></a> -->
-                            </div>
+                            {% comment %} </div>
                         </div>
                     </div>
                     <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.4s">
@@ -538,20 +529,20 @@
                             <div class="courses-item-inner p-4">
                                 <div class="d-flex justify-content-between mb-4">
                                     <div class="courses-icon-img p-3">
-                                        <img src="{% static 'img/icon-5.png'%}" class="img-fluid" alt=""> -->
+                                        <img src="{% static 'img/icon-5.png'%}" class="img-fluid" alt="">
                                     </div>
-                                    <div class="data-info d-flex flex-column"> -->
+                                    <div class="data-info d-flex flex-column"> 
                                         <div class="courses-trainer d-flex align-items-center mb-1">
-                                            <div class="me-2" style="width: 25px; height: 25px;">
+                                            <div class="me-2" style="width: 25px; height: 25px;"> {% endcomment %}
                                                 <!-- <img src="{% static 'img/testimonial-3.jpg'%}" class="img-fluid" alt=""> -->
-                                            </div>
+                                            {% comment %} </div> {% endcomment %}
                                             <!-- <p class="mb-0">Paul Flavius</p> -->
-                                        </div>
+                                        {% comment %} </div> {% endcomment %}
                                         <!-- <div class="courses-date">
                                             <p class="mb-1">Date: Saturday</p>
                                             <p class="mb-0">Time: 06.00 - 07.00</p>
                                         </div> -->
-                                    </div>
+                                    {% comment %} </div>
                                 </div>
                                 <a href="#" class="d-inline-block h4 mb-3">Jessy</a>
 
@@ -561,9 +552,9 @@
                                             <p class="mb-0">Time: 20.30 - 22.00</p>
                                              <img src="{% static 'img/testimonial-1.jpg'%}" class="img-fluid" alt="">
                                         </div>
-                                </p>
+                                </p> {% endcomment %}
                                 <!-- <a href="#" class="btn btn-primary py-2 px-4"> <span>Read More</span></a> -->
-                            </div>
+                            {% comment %} </div>
                         </div>
                     </div>
                     <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.6s">
@@ -575,16 +566,16 @@
                                     </div>
                                     <div class="data-info d-flex flex-column">
                                         <div class="courses-trainer d-flex align-items-center mb-1">
-                                            <div class="me-2" style="width: 25px; height: 25px;">
+                                            <div class="me-2" style="width: 25px; height: 25px;"> {% endcomment %}
                                                 <!-- <img src="{% static 'img/testimonial-3.jpg'%}" class="img-fluid" alt=""> -->
-                                            </div>
+                                            {% comment %} </div> {% endcomment %}
                                             <!-- <p class="mb-0">Paul Flavius</p> -->
-                                        </div>
+                                        {% comment %} </div> {% endcomment %}
                                         <!-- <div class="courses-date">
                                             <p class="mb-1">Date: Saturday</p>
                                             <p class="mb-0">Time: 06.00 - 07.00</p>
                                         </div> -->
-                                    </div>
+                                    {% comment %} </div>
                                 </div>
                                 <a href="#" class="d-inline-block h4 mb-3"> Raichel</a>
                                 
@@ -593,12 +584,12 @@
                                             <p class="mb-0">Aim:Weight Loss</p>
                                             <p class="mb-0">Time: 19.00 - 20.30</p>
                                              <img src="{% static 'img/testimonial-2.jpg'%}" class="img-fluid" alt="">
-                                        </div>
-                                </p>
+                                        </div> {% endcomment %}
+                                {% comment %} </p> {% endcomment %}
                                 <!-- <a href="#" class="btn btn-primary py-2 px-4"> <span>Read More</span></a> -->
-                            </div>
+                            {% comment %} </div>
                         </div>
-                    </div>
+                    </div> {% endcomment %}
                     <!-- <div class="col-12 text-center wow fadeInUp" data-wow-delay="0.2s">
                         <a href="#" class="btn btn-primary py-3 px-5"> <span>More Courses</span></a>
                     </div> -->

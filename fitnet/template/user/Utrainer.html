@@ -109,48 +109,20 @@
                     </p>
                 </div> -->
                 <div class="row gy-4 gx-0 justify-content-center">
-                    <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.2s">
-                        <div class="courses-item">
-                            <div class="courses-item-inner p-4">
-                                <div class="d-flex justify-content-between mb-4">
-                                    <div class="courses-icon-img p-3">
-                                        <img src="{% static 'img/icon-1.png'%}" class="img-fluid" alt="">
-                                    </div>
-                                    <div class="data-info d-flex flex-column">
-                                        <div class="courses-trainer d-flex align-items-center mb-1">
-                                            <!-- <div class="me-2" style="width: 25px; height: 25px;">
-                                                <img src="{% static 'img/testimonial-3.jpg'%}" class="img-fluid" alt="">
-                                            </div> -->
-                                            <!-- <p class="mb-0">john doe</p> -->
-                                        </div>
-                                        <!-- <div class="courses-date">
-                                            <p class="mb-0">Aim:Weight Loss</p>
-                                            <p class="mb-0">Time: 06.00 - 07.30</p>
-                                        </div> -->
-                                    </div>
-                                </div>
-                                <a href="UTDetails" class="d-inline-block h4 mb-3">Martin</a>
-                                <p class="mb-4">
-                                        <div class="courses-date">
-                                            <p class="mb-0">B.SC Exercise Physiology</p>
-                                            <p class="mb-0">Experience:4+ Years</p>
-                                             <img src="{% static 'img/mlane.jpg'%}" class="img-fluid" alt="">
-                                        </div>
-                                </p>
-                                <a href="UTDetails" class="btn btn-primary py-2 px-4"> <span>More Details</span></a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.4s">
+               
+
+                                {% for trainer in data %}
+
+                     <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.4s">
                         <div class="courses-item">
                             <div class="courses-item-inner p-4">
                                 <div class="d-flex justify-content-between mb-4">
                                     <div class="courses-icon-img p-3">
                                         <img src="{% static 'img/icon-2.png'%}" class="img-fluid" alt="">
-                                    </div>
+                                    </div> 
                                     <div class="data-info d-flex flex-column">
                                         <div class="courses-trainer d-flex align-items-center mb-1">
-                                            <div class="me-2" style="width: 25px; height: 25px;">
+                                            <div class="me-2" style="width: 25px; height: 25px;"> 
                                                 <!-- <img src="{% static 'img/testimonial-3.jpg'%}" class="img-fluid" alt=""> -->
                                             </div>
                                             <!-- <p class="mb-0">Jane Smith</p> -->
@@ -159,156 +131,26 @@
                                             <p class="mb-0">Aim:Strength</p>
                                             <p class="mb-0">Time: 16.00 - 17.30</p>
                                         </div> -->
-                                    </div>
-                                </div>
-                                <a href="UTDetails" class="d-inline-block h4 mb-3">samuel</a>
+                                     </div>
+                                </div> 
+                               <a  class="d-inline-block h4 mb-3">{{trainer.name}}</a>
                                 <p class="mb-4">
                                         <div class="courses-date">
-                                            <p class="mb-0">B.SC in Fitness Management</p>
-                                            <p class="mb-0">Experience:5+Years</p>
-                                             <img src="{% static 'img/macc3.jpg'%}" class="img-fluid" alt="">
+                                            <p class="mb-0">Specification: {{trainer.specification}}</p>
+                                            <p class="mb-0">Experience: {{trainer.experience}}</p>
+                                             <img src="{{trainer.profileimg.url}}" style="width: 150px; height: 150px;" class="img-fluid" alt="">
                                         </div>
                                 </p>
-                                <a href="" class="btn btn-primary py-2 px-4"> <span>More Details</span></a>
+                                <a href="{% url 'Udetails' vid=trainer.id %}" class="btn btn-primary py-2 px-4"> <span>More Details</span></a>
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.6s">
-                        <div class="courses-item">
-                            <div class="courses-item-inner p-4">
-                                <div class="d-flex justify-content-between mb-4">
-                                    <div class="courses-icon-img p-3">
-                                        <img src="{% static 'img/icon-3.png'%}" class="img-fluid" alt="">
-                                    </div>
-                                    <div class="data-info d-flex flex-column">
-                                        <div class="courses-trainer d-flex align-items-center mb-1">
-                                            <div class="me-2" style="width: 25px; height: 25px;">
-                                                <!-- <img src="{% static 'img/testimonial-3.jpg'%}" class="img-fluid" alt=""> -->
-                                            </div>
-                                            <!-- <p class="mb-0">Paul Flavius</p> -->
-                                        </div>
-                                        <!-- <div class="courses-date"> -->
-                                            <!-- <p class="mb-1">Date: Saturday</p> -->
-                                            <!-- <p class="mb-0">Time: 06.00 - 07.00</p> -->
-                                        <!-- </div> -->
-                                    </div>
-                                </div>
-                                <a href="UTDetails" class="d-inline-block h4 mb-3">Gabriel</a>
-                                <p class="mb-4"> 
-                                        <div class="courses-date">
-                                            <p class="mb-0">B.SC in Physical Education</p>
-                                            <p class="mb-0">Experience:3+Years</p>
-                                             <img src="{% static 'img/lee-6.jpg'%}" class="img-fluid" alt="">
-                                        </div>
-                                </p>
-                                <a href="" class="btn btn-primary py-2 px-4"> <span>More Details</span></a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.2s">
-                        <div class="courses-item">
-                            <div class="courses-item-inner p-4">
-                                <div class="d-flex justify-content-between mb-4">
-                                    <div class="courses-icon-img p-3">
-                                        <img src="{% static 'img/icon-4.png'%}" class="img-fluid" alt="">
-                                    </div>
-                                    <div class="data-info d-flex flex-column">
-                                        <div class="courses-trainer d-flex align-items-center mb-1">
-                                            <div class="me-2" style="width: 25px; height: 25px;">
-                                                <!-- <img src="{% static 'img/testimonial-3.jpg'%}" class="img-fluid" alt=""> -->
-                                            </div>
-                                            <!-- <p class="mb-0">Paul Flavius</p> -->
-                                        </div>
-                                        <!-- <div class="courses-date"> -->
-                                            <!-- <p class="mb-1">Date: Saturday</p> -->
-                                            <!-- <p class="mb-0">Time: 06.00 - 07.00</p> -->
-                                        <!-- </div> -->
-                                    </div>
-                                </div>
-                                <a href="" class="d-inline-block h4 mb-3">Francis</a>
-                                
-                                <p class="mb-4"> 
-                                        <div class="courses-date">
-                                            <p class="mb-0">M.SC in Exercise Science</p>
-                                            <p class="mb-0">Experience:1+Year</p>
-                                             <img src="{% static 'img/nithin-2.jpg'%}" class="img-fluid" alt="">
-                                        </div>
-                                </p>
-                                <a href="" class="btn btn-primary py-2 px-4"> <span>More Details</span></a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.4s">
-                        <div class="courses-item">
-                            <div class="courses-item-inner p-4">
-                                <div class="d-flex justify-content-between mb-4">
-                                    <div class="courses-icon-img p-3">
-                                        <img src="{% static 'img/icon-5.png'%}" class="img-fluid" alt=""> -->
-                                    </div>
-                                    <div class="data-info d-flex flex-column"> -->
-                                        <div class="courses-trainer d-flex align-items-center mb-1">
-                                            <div class="me-2" style="width: 25px; height: 25px;">
-                                                <!-- <img src="{% static 'img/testimonial-3.jpg'%}" class="img-fluid" alt=""> -->
-                                            </div>
-                                            <!-- <p class="mb-0">Paul Flavius</p> -->
-                                        </div>
-                                        <!-- <div class="courses-date">
-                                            <p class="mb-1">Date: Saturday</p>
-                                            <p class="mb-0">Time: 06.00 - 07.00</p>
-                                        </div> -->
-                                    </div>
-                                </div>
-                                <a href="" class="d-inline-block h4 mb-3">Jasmine</a>
+                    {% endfor %}
 
-                                <p class="mb-4"> 
-                                        <div class="courses-date">
-                                            <p class="mb-0">B.SC in Fitness Management </p>
-                                            <p class="mb-0">Experience:2+Years</p>
-                                             <img src="{% static 'img/testimonial-1.jpg'%}" class="img-fluid" alt="">
-                                        </div>
-                                </p>
-                                <a href="" class="btn btn-primary py-2 px-4"> <span>More Details</span></a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.6s">
-                        <div class="courses-item">
-                            <div class="courses-item-inner p-4">
-                                <div class="d-flex justify-content-between mb-4">
-                                    <div class="courses-icon-img p-3">
-                                        <img src="{% static 'img/icon-6.png'%}" class="img-fluid" alt="">
-                                    </div>
-                                    <div class="data-info d-flex flex-column">
-                                        <div class="courses-trainer d-flex align-items-center mb-1">
-                                            <div class="me-2" style="width: 25px; height: 25px;">
-                                                <!-- <img src="{% static 'img/testimonial-3.jpg'%}" class="img-fluid" alt=""> -->
-                                            </div>
-                                            <!-- <p class="mb-0">Paul Flavius</p> -->
-                                        </div>
-                                        <!-- <div class="courses-date">
-                                            <p class="mb-1">Date: Saturday</p>
-                                            <p class="mb-0">Time: 06.00 - 07.00</p>
-                                        </div> -->
-                                    </div>
-                                </div>
-                                <a href="UTDetails" class="d-inline-block h4 mb-3">Merlin</a>
-                                
-                                <p class="mb-4">
-                                        <div class="courses-date">
-                                            <p class="mb-0">M.SC Exercise Physiology</p>
-                                            <p class="mb-0">Experience:0+Year</p>
-                                             <img src="{% static 'img/testimonial-2.jpg'%}" class="img-fluid" alt="">
-                                        </div>
-                                </p>
-                                <a href="" class="btn btn-primary py-2 px-4"> <span>More Details</span></a>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- <div class="col-12 text-center wow fadeInUp" data-wow-delay="0.2s">
-                        <a href="#" class="btn btn-primary py-3 px-5"> <span>More Courses</span></a>
-                    </div> -->
-                </div>
-            </div>
+                
+                    
+     </div>
+            </div> 
         </div>
         <!-- Courses End -->
          

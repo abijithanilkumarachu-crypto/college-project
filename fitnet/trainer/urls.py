@@ -10,7 +10,9 @@ urlpatterns=[
      path('Task',views.Task,name='Task'),
      path('User_details',views.User_details,name='User_details'),
      path('Diet',views.Diet,name='Diet'),
-     path('User_Profile',views.User_Profile,name='User_Profile')
+     path('User_Profile<int:uid>',views.User_Profile,name='User_Profile'),
+     path('Tdelete<int:sid>',views.Tdelete,name='Tdelete')
+
 
    
 ]

@@ -17,6 +17,28 @@
       color: #fff;
     }
 
+    /* Back Button */
+    .back-btn {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      background: rgba(0,0,0,0.6);
+      padding: 10px 15px;
+      border-radius: 10px;
+      color: #ffcc00;
+      font-size: 16px;
+      cursor: pointer;
+      border: 1px solid #ffcc00;
+      display: flex;
+      align-items: center;
+      gap: 5px;
+      transition: 0.3s;
+    }
+    .back-btn:hover {
+      background: #ffcc00;
+      color: #000;
+    }
+
     .login-box {
       background: rgba(0,0,0,0.75);
       padding: 40px 30px;
@@ -72,14 +94,25 @@
     }
   </style>
 </head>
+ 
 <body>
+
+  <!-- 🔙 Back button -->
+  <div class="back-btn" onclick="history.back()">
+    ← Back
+  </div>
 
   <div class="login-box">
     <h2>Fitness Login</h2>
-    <form action="index2">
-     <input type="email" name="email" placeholder="Enter Email"><br>
-     <input type="password" name="password" placeholder="Enter Password"><br>
+     <form method="post" enctype="multipart/form-data">
+            {% csrf_token %}
+            {% for message in messages %}
+                <p style="color:red;">{{ message }}</p>
+            {% endfor %}
+      <input type="email" name="email" placeholder="Enter Email"><br>
+      <input type="password" name="password" placeholder="Enter Password"><br>
       <button type="submit">Login</button>
+      
     </form>
   </div>
 

@@ -3,40 +3,138 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Fitness View Slot</title>
-    <link rel="stylesheet" href="styles.css"> </head>
-    
+    <title>Fitness Slots</title>
+
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background: url('https://images.pexels.com/photos/1552242/pexels-photo-1552242.jpeg')
+                        no-repeat center center/cover;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        /* Top Header */
+        .topbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: rgba(0, 0, 0, 0.6);
+            color: white;
+            padding: 12px 20px;
+        }
+
+        .empty-space { width: 50px; }
+
+        .nav-btn {
+            background: #fff;
+            border: none;
+            padding: 8px 15px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 15px;
+            font-weight: bold;
+        }
+
+        /* Center Container */
+        .content-wrapper {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+
+        /* Slot Card */
+        .slot-container {
+            width: 90%;
+            max-width: 450px;
+            background: rgba(255, 255, 255, 0.9);
+            padding: 25px;
+            border-radius: 12px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.35);
+        }
+
+        .slot-container h2 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .slot-item {
+            background: #fff;
+            border-radius: 10px;
+            padding: 18px;
+            margin-bottom: 15px;
+            box-shadow: 0 1px 5px rgba(0,0,0,0.2);
+            position: relative;
+        }
+
+        .slot-header {
+            display: flex;
+            justify-content: space-between;
+            font-weight: bold;
+            margin-bottom: 8px;
+        }
+
+        .slot-title { font-size: 16px; }
+        .slot-time { font-size: 14px; opacity: 0.85; }
+
+        .day-label {
+            display: inline-block;
+            background: #000000c0;
+            padding: 4px 10px;
+            border-radius: 6px;
+            color: #fff;
+            font-size: 14px;
+            margin-bottom: 8px;
+        }
+
+        /* Delete Icon */
+        .delete-icon {
+            position: absolute;
+            top: 8px;
+            right: 10px;
+            cursor: pointer;
+            font-size: 16px;
+            color: #ff3b3b;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
 <body>
 
-    
+    <!-- Header -->
+    <header class="topbar">
+        <div class="empty-space"></div>
+        <button class="nav-btn" onclick="history.back()">Back</button>
+    </header>
 
-        <header class="page-header">
-            <h1>Daily Workout Schedule</h1>
-        </header>
+    <!-- Centered Content -->
+    <div class="content-wrapper">
+        <div class="slot-container">
+            <h2>Weekly Workout Slots</h2>
 
-        <main class="fitness-view-slot">
-            <h2>Full Body Strength Training</h2>
-            
-            <div class="schedule-details">
-                <div class="detail-item">
-                    <span class="label">Day:</span>
-                    <span class="value">Monday</span>
-                </div>
-                <div class="detail-item">
-                    <span class="label">Starting Time:</span>
-                    <span class="value">6:00 AM</span>
-                </div>
-                <div class="detail-item">
-                    <span class="label">Ending Time:</span>
-                    <span class="value">6:45 AM</span>
+            {% for i in da %}
+            <div class="slot-item">
+                <a href="{% url 'Tdelete' i.id %}">
+                
+                <span class="delete-icon">&#128465;</span>
+                </a>
+
+                <div class="day-label">{{ i.Day }}</div>
+                <div class="slot-header">
+                    <div class="slot-title">Beginner Warmup</div>
+                    <div class="slot-time">{{ i.Start_time }} - {{ i.End_time }}</div>
                 </div>
             </div>
-            
-            
-            
-        </main>
+            {% endfor %}
+
+        </div>
     </div>
-    
 
 </body>
 </html>

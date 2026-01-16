@@ -47,13 +47,20 @@
     <h1 class="text-danger mb-0">
       <i class="fas fa-hand-rock me-2"></i> Fitnet
     </h1>
-
     <!-- Right: Back Button -->
-    <a href="Userhome" class="btn btn-primary py-2 px-4">Back</a>
+    
+  <div>
+      <a href="Userhome" class="btn btn-primary py-2 px-4">Back</a>
+      <a href="Upayment_details" class="btn btn-success py-2 px-4 ms-2">
+        Booking Details
+      </a>
+    </div>
+
+    
   </div>
 
-  <!-- Centered Heading Below Navbar -->
-  <div class="container text-center mt-3">
+  <!-- Centered Heading Below Navbar --> 
+    <div class="container text-center mt-3">
     <h1 style="color: white;">Trainer Information</h1>
   </div>
 </div>
@@ -161,36 +168,54 @@
 </head>
 <body>
 
+  <form method="post">
+    {% csrf_token %}
+
   <div class="profile-container">
+    <center>
+    {% for messages in messages %}
+<h4 style="color: green;"><b>{{ messages }}</b></h4>
+{% endfor %}
+    </center>
     <div class="trainer-info">
-      <h1>Martin</h1>
-      <p>B.Sc in Exercise Physiology</p>
-      <p>Location: Kerala, India</p>
-      <p>Rating: ⭐ 4.8 / 5</p>
+      <h1>{{details.name}}</h1>
+      <p>{{details.degree}}</p>
+      <p>Location: {{details.location}}</p>
+      {% comment %} <p>Rating: ⭐ {{details.rating}} / 5</p> {% endcomment %}
     </div>
 
     <div class="section">
-      <h2>About Martin</h2>
+      <h2>About {{details.name}}</h2>
       <p>
-        Martin is a certified personal trainer with over 4 years of experience. He specializes in weight loss, strength training, and high-intensity interval training (HIIT). His approach is highly personalized, incorporating fitness assessments, structured workout plans, and nutritional advice to help clients reach their health goals efficiently and sustainably.
+         {{details.name}}is a certified personal trainer with over 4 years of experience. He specializes in weight loss, strength training, and high-intensity interval training (HIIT). His approach is highly personalized, incorporating fitness assessments, structured workout plans, and nutritional advice to help clients reach their health goals efficiently and sustainably.
       </p>
     </div>
 
     <div class="section">
       <h2>Specialties</h2>
       <div class="badges">
-        <div class="badge">Weight Loss</div>
-        <div class="badge">Strength Training</div>
+        <div class="badge">{{details.specification}}</div>
+        {% comment %} <div class="badge">Strength Training</div>
         <div class="badge">HIIT</div>
-        <div class="badge">Nutritional Coaching</div>
+        <div class="badge">Nutritional Coaching</div> {% endcomment %}
       </div>
     </div>
 
     <div class="section">
-      <h2>Certifications</h2>
+      <h2>Achievements </h2>
       <p>
-        • ACE – American Council on Exercise<br>
-        • NASM – National Academy of Sports Medicine
+        • {{details.achievements}}<br>
+        {% comment %} • ACE – American Council on Exercise<br>
+        • NASM – National Academy of Sports Medicine {% endcomment %}
+      </p>
+    </div>
+
+     <div class="section">
+      <h2>Monthly Fee </h2>
+      <p>
+        • ₹ {{details.Expected_income}}<br>
+        {% comment %} • ACE – American Council on Exercise<br>
+        • NASM – National Academy of Sports Medicine {% endcomment %}
       </p>
     </div>
 
@@ -201,49 +226,57 @@
         • 8:00 AM – 11:00 AM<br>
         • 4:00 PM – 9:00 PM
       </p>
-    </div>
+      <p>
+       <strong>Consultation Time:</strong><br>
 
+{% for slot in st %}
+    • {{ slot.Day }} : {{ slot.Start_time }} – {{ slot.End_time }}<br>
+{% empty %}
+    • No slots available<br>
+{% endfor %}
+
+        
+      </p>
+    </div>
     <div class="section">
       <h2>Book a Session</h2>
-      <p>If you're ready to begin your fitness journey, you can book a personalized session with Martin below:</p>
-      <a href="UTBook" class="book-btn">Book Now</a>
+      <p>If you're ready to begin your fitness journey, you can book a personalized session with {{details.name}} below:<br>
+      The payment is done monthly at the time of booking. The above consultation times are subject to change based on the trainer's availability. 
+      </p><div class="row g-2 align-items-center mt-3">
+  <div class="col-md-4">
+    <input type="text" name="health_issues" class="form-control"
+           placeholder="Health issues (if any)">
+  </div>
+
+  <div class="col-md-4">
+    <input type="text" name="notes" class="form-control"
+           placeholder="Additional notes">
+  </div>
+
+  <div class="col-md-4">
+    <input type="text" name="Goal" class="form-control"
+           placeholder="Goal">
+  </div>
+
+  
+</div>
+
+      <input type="hidden" name="trainer_id" value="{{details.id}}">
+      {% comment %} <input type="" name="slot" value="{{slot}}"> {% endcomment %}
+      <input type="hidden" name="Expected_income" value="{{details.Expected_income}}"> 
+      {% comment %} <input type="" name="user_id" value="{{user.id}}"> {% endcomment %}
+      {% comment %} <input type="hidden" name="is_booked" value="False"> {% endcomment %}
+      {% comment %} <a href="{% url 'UTBook' details.id %}" class="book-btn">Book Now</a> {% endcomment %}
+      <button type="submit" class="book-btn">Book Now</button>
     </div>
   </div>
+
+<!-- Success Popup -->
+
 
 </body>
 </html>
 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
         <script src="{% static 'lib/wow/wow.min.js'%}"></script>

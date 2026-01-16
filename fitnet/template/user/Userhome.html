@@ -106,12 +106,12 @@
     <a href="UDiet" class="nav-item nav-link">Diet</a>
     <a href="Utask" class="nav-item nav-link">Task</a>
     <a href="UProfile" class="nav-item nav-link">Profile</a>
-    <a href="blog.html" class="nav-item nav-link">Payment Details</a>
+    <a href="Upayment_details" class="nav-item nav-link">Payment Details</a>
 
     <!-- 🛒 Cart Icon -->
-    <a href="cart.html" class="nav-item nav-link">
+    <a href="Ucart" class="nav-item nav-link">
         <i class="fa-solid fa-cart-shopping"></i>
-        <span class="d-none d-lg-inline">Cart</span>
+        <span class="d-none d-lg-inline">🛒</span>
     </a>
 
                                      
@@ -202,6 +202,7 @@
                     </div>
                 </div>
             </div>
+            
             <!-- <div class="header-carousel-item hero-section">
                 <div class="hero-bg-half-2"></div>
                 <div class="carousel-caption">
@@ -225,6 +226,42 @@
             </div>
         </div>
         <!-- Carousel End -->
+        <div class="container py-5">
+    <div class="text-center mb-5">
+        <h2 class="text-primary">Our Products</h2>
+        <p class="text-muted">Premium gym supplements & accessories</p>
+    </div>
+
+    <div class="row">
+        {% for p in da %}
+        <div class="col-md-4 mb-4">
+            <div class="card shadow-sm border-0 h-100">
+                
+                {% if p.image %}
+                <img src="{{ p.image.url }}" class="card-img-top" style="height:220px; object-fit:cover;">
+                {% else %}
+                <img src="https://cdn.pixabay.com/photo/2016/11/22/19/25/dumbbells-1850926_1280.jpg"
+                     class="card-img-top" style="height:220px; object-fit:cover;">
+                {% endif %}
+
+                <div class="card-body text-center">
+                    <h5 class="card-title">{{ p.name }}</h5>
+                    <p class="fw-bold text-success">₹{{ p.price }}</p>
+                    <p class="text-muted small">{{ p.description|truncatechars:80 }}</p>
+                </div>
+
+                <div class="card-footer bg-white text-center border-0">
+                    <a href="{% url 'product_details' p.id %}" class="btn btn-outline-primary btn-sm mb-2">
+                        View Details
+                    </a>
+                </div>
+
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+
 
         <!-- About Start -->
         <!-- <div class="container-fluid about pt-5">
